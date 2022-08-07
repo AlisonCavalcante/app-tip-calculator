@@ -1,7 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Kdam+Thmor+Pro&family=Lobster&family=Signika:wght@400;700&display=swap');
 
-
 body {
   --strong-cyan: hsl(172, 67%, 45%);
   --very-dark-cyan: hsl(183, 100%, 15%);
@@ -9,4 +8,6 @@ body {
   height: 0;
   background-color: hsl(185, 41%, 84%);
   font-family: 'Space Mono';
+  font-weight: 700px;
+  letter-spacing: 4px;
 }

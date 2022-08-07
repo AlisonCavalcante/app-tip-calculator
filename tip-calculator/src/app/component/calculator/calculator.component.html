@@ -1,0 +1,48 @@
+<div class="card-container">
+  <div class="card-especificacoes">
+    <form [formGroup]="form">
+      <div>
+        <h5 class="especificacoes__titles">Bill</h5>
+        <div class="especificacoes__content-input">
+          <input formControlName="bill" type="number" placeholder="0">
+        </div>
+      </div>
+      <div>
+        <h5 class="especificacoes__titles">Select Tip %</h5>
+        <div>
+          <div class="especificacoes__content-button">
+            <button (click)="calculateTip(5)">5%</button>
+            <button (click)="calculateTip(10)">10%</button>
+            <button (click)="calculateTip(15)">15%</button>
+            <button (click)="calculateTip(25)">25%</button>
+            <button (click)="calculateTip(50)">50%</button>
+            <input formControlName="custom" type="number" placeholder="Custom">
+          </div>
+        </div>
+      </div>
+      <div>
+        <h5 class="especificacoes__titles">Number of People</h5>
+        <div class="especificacoes__content-input">
+          <input formControlName="numberPeople" type="number" placeholder="0">
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="card-result">
+    <div class="card-result__container">
+      <div class="result__content-tip-amount">
+        <h5>Tip Amount</h5>
+        <h1>${{tipPerson | number: '1.2-2'}}</h1>
+      </div>
+      <div class="result__content-tip-amount">
+        <h5>Total</h5>
+        <h1>${{totalAmountPerson | number: '1.2-2'}}</h1>
+      </div>
+      <div></div>
+      <div class="result__content-button">
+        <button [disabled]="!form.valid" (click)="reset()">RESET</button>
+      </div>
+    </div>
+
+  </div>
+</div>
